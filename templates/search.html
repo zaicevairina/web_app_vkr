@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+{% block title %} {{title}} {% endblock %}
+{% block content %}
+{% csrf_token %}
+<div class="row">
+    <div class="row">
+        <div class="col-md-8 mx-auto social-container my-2 order-md-1">
+            <form method="POST">
+                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" name="search" placeholder="Введите слово">
+				<input type="radio" name="type" id="library" value="library" checked>
+			    <label for="library">
+				  Бибилиотека
+			    </label>
+			    <input type="radio" name="type" id="vk" value="vk">
+			    <label for="vk">
+				  Вконтакте
+			    </label>
+				<div class="library">
+					<div>
+						<input type="radio" id="title"
+						 name="choice" value="title" checked>
+						<label for="title">По заголовку</label>
+						<input type="radio" id="author"
+						 name="choice" value="author" >
+						<label for="author">По автору</label>
+						 <input type="radio" id="kws"
+						 name="choice" value="kws">
+						<label for="kws">По ключевым словам</label>
+					</div>
+					<div>
+						  <input type="radio" name="type_search" id="all" value="all" checked>
+						  <label for="all">
+							Общая библиотека
+						  </label>
+						  <input type="radio" name="type_search" id="users" value="users">
+						  <label for="users">
+							Личная библиотека
+						  </label>
+					</div>
+			  	</div>
+				<div class="vk">
+					<div>
+						<input type="radio" name="type_search_vk" id="all_post" value="all" checked>
+					  	<label for="all_post">
+							По всем группам
+					  	</label>
+					  	<input type="radio" name="type_search_vk" id="users_post" value="users">
+					  	<label for="users_post">
+							Определенная группа(пример запроса: 'аналитика, когортный анализ')
+					  	</label>
+					</div>
+				</div>
+				<div>
+               		<button type="submit" class="btn btn-secondary">Поиск</button>
+				</div>
+            </form>
+        </div>
+    </div>
+    <script type="text/javascript">
+    	let input = document.querySelector('input[type="text"]')
+    	let button = document.querySelector('button[type="submit"]')
+    	if (input.value.trim() !== '') {
+    			button.removeAttribute('disabled')
+    		} else {
+    			button.setAttribute('disabled', true)
+    	}
+    	input.addEventListener('input', () => {
+    		if (input.value.trim() !== '') {
+    			button.removeAttribute('disabled')
+    		} else {
+    			button.setAttribute('disabled', true)
+    		}
+    	})
+    </script>
+    </div>
+	<style>
+		.library {
+			display: none;
+		}
+		#library:checked ~ .library {
+			display: block;
+		}
+		.vk {
+			display: none;
+		}
+		#vk:checked ~ .vk {
+			display: block;
+		}
+	</style>
+{% endblock %}

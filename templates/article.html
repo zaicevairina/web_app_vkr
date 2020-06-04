@@ -1,0 +1,98 @@
+{% extends 'base.html' %}
+{% block title %} Введите текст {% endblock %}
+{% block content %}
+{% csrf_token %}
+<div class="row">
+    <div class="row">
+        <form class="form-area" method="POST">
+	        <div class="form-group">
+			  <textarea class="text" placeholder="Введите текст" name="article">{{article}}</textarea>
+			</div>
+	    	<div class="input-group mb-3">
+				<div class="input-group-prepend">
+			    	<span class="input-group-text" id="basic-addon1">Ключевые слова</span>
+			  	</div>
+			  <textarea class="form-control" placeholder="Ключевые слова" aria-label="keyword" name="keyword">{{keyword}}</textarea>
+			</div>
+	    	<div class="input-group mb-3">
+				<div class="input-group-prepend">
+			    <span class="input-group-text" id="basic-addon1">Аннотации</span>
+			  </div>
+			  <textarea class="form-control" placeholder="Аннотации" aria-label="annotation" name="annotation">{{annotation}}</textarea>
+			</div>
+			<div>
+				<span>
+					Мера сходства
+				</span>
+					<input type="radio" name="koef" id="serense" value="serense" checked>
+					<label for="serense">
+						Коэффицент Сёренсена
+					</label>
+					<input type="radio" id="cos" name="koef" value="cos">
+					<label for="cos">
+						Косинусное расстояние
+					</label>
+			</div>
+			<button type="submit" class="btn btn-secondary" name="create" value="create">Создать</button>
+			<div>
+				Поиск похожих статей в
+			</div>
+			<div class="form-check">
+			  <input class="form-check-input" type="radio" name="type_search" id="all" value="all" checked>
+			  <label class="form-check-label" for="all">
+			    общей библиотеке
+			  </label>
+			</div>
+			<div class="form-check">
+			  <input class="form-check-input" type="radio" name="type_search" id="users" value="users">
+			  <label class="form-check-label" for="users">
+			    личной библиотеке
+			  </label>
+			</div>
+			<button type="submit" class="btn btn-secondary" name="find_similiar" value="find_similiar">Найти похожие</button>
+            <div>{{ msg }}</div>
+        </form>
+    </div>
+    <script type="text/javascript">
+    	let article = document.querySelector('textarea[name="article"]')
+    	let keyword = document.querySelector('textarea[name="keyword"]')
+    	let annotation = document.querySelector('textarea[name="annotation"]')
+    	let button = document.querySelector('button[name="find_similiar"]')
+    	if (article.value.trim() === ''
+				&& keyword.value.trim() === ''
+				&& annotation.value.trim() === '')
+			{
+				button.setAttribute('disabled', true)
+			}
+    	const checkTextAreas = () => {
+    		if (article.value.trim() !== '' 
+    			&& keyword.value.trim() !== '' 
+    			&& annotation.value.trim() !== '') 
+    		{
+    			button.removeAttribute('disabled')
+    		} else {
+    			button.setAttribute('disabled', true)
+    		}
+    	}
+    	article.addEventListener('input', checkTextAreas)
+    	keyword.addEventListener('input', checkTextAreas)
+    	annotation.addEventListener('input', checkTextAreas)
+    </script>
+</div>
+<style type="text/css">
+	textarea {
+        resize: none;
+        width: 100%;
+        height: 200px;
+        border: 1px solid #ced4da;
+		border-radius: .25rem;
+     }
+     .form-area {
+     	width: 100%;
+     }
+     /*input {
+		border: 1px solid #ced4da;
+		border-radius: .25rem;
+     }*/
+</style>
+{% endblock %}

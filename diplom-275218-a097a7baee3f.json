@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "diplom-275218",
+  "private_key_id": "a097a7baee3faf3f433ab021ffc9308c1955d1c3",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC1g6xbA662YmVR\ntK2GsYK11mCnwdcR/zBWo2ASkXG7EtIIyozAN0vsSpny7u90EUUmE073LIiz6q5D\nNxvbVLTOwA2FIbzJw4bIVPd/AzRq0yVAuuQDEQoyK9TuVs7Ob+dQsRkjNRF1mIw+\nZWcQCkLfNtwO77AVPgOPL+9tOfvpRWewZkpTUV51es+9y7ljspdhrDLpquA+h6W4\nV7ivaYeEoheG0rVDn98R7y1DHeO66fsKg2BTn6s6pjoCLB1RxvGKLJUWQG2xMfSg\nRODAV0YsiN7Cm9/GlgfrHrdNcGlyTTJ9g3kJtLcHSdZqK0WMNrbuC3H5Q3GWU0Y9\nVzQDi4QpAgMBAAECggEAM/EkJz9chbCOkd0EMyEk6GgabKcZpnrCGGjUGzwnsYLn\nO8DKmk64mTuX5l7dgvdWNFkeJblGvUWQ7Icen5sTyn5G4CwRXCNptHYsBNqj61XU\nuTtB+Gat5kGIw1NwBr8bEIo9SUfsYRxwNYLLBVoKXNnUCyon10xRtG3hM/59yfio\n6Mu6Sno0GoXa3kpud3EQqpU3P3eFLkPc+LxTYsqL6GDiYVT8hxh8Bcs96LlQE079\nPbks1fuCW6pTYpI+22/W2xhy2YaaKZ3z37rOAJWpZnsQ4sBZAP8Q/q7Xt6G/gYPe\nuuFek3oxdAEY0WYg2FpX/+DUVPzZF+m7ms66vfWAqQKBgQDkb6vqOhPyVpv4c29X\n14ukhHO02xsv6+JpgbAKhzauO7SJcZnskwoFI7jyxelSGuwZ+44w/pBqK5WckgPu\nyFJ1zJf8tJS7TG74937FFlgQtECdOLfYuP84z/bqRLeJ5Lf5VXFJHmN61aq7dGFo\nzCi2wCZT5rwZKBHg/APhYQT/RwKBgQDLaplMml29FcCnkQ1jrb0TFX1D+ooOUpOb\n+geIKpMhGcu/B8VpmY6S8cxcH8rgWiRBsZVL9H3mWXNLDymAAcmhdSItm7hCbgrY\nhwVQLAITXoD+7VSzk3iyQKRJi/bwmU2xFDHWFn8rdKo0nbr64j8VMqlMZ4cER3Md\n8CDSh6h5DwKBgDBwgarsX9huhypbCAw/d6wOLh72q0AxK9SlnHfPDkhJ/tF6VmJ1\nF5XZalmIoB45+UDVN+SpxmPNFC+cQts6fUnfdYcvn65L2ehPSwFt6IS6RE1SfqGl\nMPGSH9Cze5vw9RYZCSmxGPUuI8MWPaWkTSnbewUlk1NeTNRBfG0pTo73AoGBAJnG\n1G1cpVC0iRgkSAL67NzoefJSDNwXARABTIBb7y4u2iBoN41FUMs1kFB0mGJSwuYG\n4d6xzhu9s7MimzTyJQOyEUx5VCqkFf7q09Fv84HBB7Owpz+6VJws0gXnkZ8BxgIA\nSkyWZTzszV9Jfnj7YMUdr27bNO6/NP+E8Ms3Ut1xAoGAL4yt17Tl+xtvX2og+kIE\nKgRKdpZSVJ2AS7RZgHI2yGKHPmtWRCIKQShxL+V/FpwKaWAhietuQ6B6zFxu0KBV\n3Gwk2ddaTyFB5+VwNEoZLWt3yTKyzfG14BbYuQubxW2usNwj1pjZSy1fNG0S2XEN\n0HAZsvBPpnLw7r8mOje4GfI=\n-----END PRIVATE KEY-----\n",
+  "client_email": "diplom2020@diplom-275218.iam.gserviceaccount.com",
+  "client_id": "112294363223078946096",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/diplom2020%40diplom-275218.iam.gserviceaccount.com"
+}

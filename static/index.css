@@ -1,0 +1,56 @@
+img {
+    border: 3px solid #282c34;
+}
+
+.row {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container-fluid {
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-fluid > div {
+    width: 85%;
+    min-width: 300px;
+}
+
+.card {
+    width: 100%;
+}
+
+.social-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.btn a, .btn a:hover {
+    color: white;
+    text-decoration: none ;
+}
+
+body {
+    background-color: #282c34;
+}
+
+button {
+    margin-top: 10px;
+}
+
+label {
+    margin: 0 5px;
+}

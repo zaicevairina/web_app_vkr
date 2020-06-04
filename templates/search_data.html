@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block title %} Результаты на запрос: {{search_data}} {% endblock %}
+{% block content %}
+{% csrf_token %}
+<div>
+    <a href="/search">Назад</a>
+    <div class="row">
+    	{% if data|length > 0 %}
+        <div>
+          {% for data in data %}
+                <div><b>{{ forloop.counter }}. Автор</b>: {{ data.0 }}</div>
+                <div class="mb-1">
+                    <span style="visibility: hidden;">{{ forloop.counter }} .
+                    </span>
+                    <b>Название</b>: {{ data.1 }}
+                </div>
+          {% endfor %}
+        </div>
+        {% elif data|length == 0 %}
+        <h2>
+        	Ничего не найдено найдено
+        </h2>
+        {% endif %}
+    </div>
+    </div>
+{% endblock %}

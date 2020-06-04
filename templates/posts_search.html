@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title %} Поиск по вашим группам {% endblock %}
+{% block content %}
+{% csrf_token %}
+<div class="row">
+    <div class="row">
+        <div class="col-md-8 mx-auto social-container my-2 order-md-1">
+            <form method="POST">
+                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" name="search" placeholder="Введите слово">
+
+                <div>
+                    <button type="submit" class="btn btn-secondary">Поиск</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

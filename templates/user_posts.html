@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+{% block title %} Список групп Вконтакте {{search_data}} {% endblock %}
+{% block content %}
+{% csrf_token %}
+<div class="row">
+    <div class="row">
+    	{% if data|length > 0 %}
+        <div>
+            <form method="POST">
+                <form method="POST">
+                <div class="flx">
+                    <span class="header">
+                        <b>Название</b>
+                    </span>
+                    <span></span>
+                 </div>
+                {% for data in data %}
+                    <div class="flx">
+                        <span>{{ data.1 }}</span>
+                        <span>
+                            <button name="update" value={{ data.0 }}>Обновить</button>
+                            <button name="delete" value={{ data.0 }}>Удалить</button>
+                        </span>
+                    </div>
+                {% endfor %}
+            </form>
+            <div>
+                {{ msg }}
+            </div>
+        </div>
+        {% elif data|length == 0 %}
+        <h2>
+        	Необходимо добавить группы
+        </h2>
+        {% endif %}
+    </div>
+    <script type="text/javascript">
+        const row = document.querySelector('.row')
+        const form = document.querySelector('form')
+        const button = document.querySelectorAll('button')
+        const delete_button = document.querySelectorAll('button[name="delete"]')
+        const update_buttons = document.querySelectorAll('button[name="update"]')
+        console.log(update_buttons)
+        for (let i = 0; i < update_buttons.length; i++) {
+            update_buttons[i].addEventListener('click',() => {
+                const div = document.createElement('div')
+                div.innerText = 'Идет обновление группы'
+                row.append(div)
+            })
+        }
+
+        for (let i = 0; i < delete_button.length; i++) {
+            delete_button[i].addEventListener('click',(event) => {
+                result = confirm('Вы точно хотите удалить группу?');
+                if (result) {
+                    const div = document.createElement('div')
+                    div.innerText = 'Идет удаление группы'
+                    row.append(div)
+                } else {
+                    event.preventDefault()
+                }
+            })
+        }
+    </script>
+</div>
+<style type="text/css">
+    .flx {
+            display: flex;
+            justify-content: center;
+            border-left: 1px solid #000;
+        }
+        .flx:first-child {
+            border-top: 1px solid #000;
+            border-left: 1px solid #000;
+        }
+        .flx > span {
+            flex: 1 1;
+            border-bottom: 1px solid #000;
+            padding: 5px;
+        }
+        span:last-child {
+            border-right: 1px solid #000;
+        }
+        button {
+            float: right;
+            margin: 5px 10px;
+        }
+</style>
+{% endblock %}

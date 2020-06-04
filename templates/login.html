@@ -1,0 +1,20 @@
+{% extends 'base_login.html' %}
+{% block title %} Вход {% endblock %}
+{% block content %}
+{% csrf_token %}
+<div class="row">
+    <div class="row">
+        <div class="col-md-8 mx-auto social-container my-2 order-md-1">
+            <form method="POST">
+                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" name="username" placeholder="Логин">
+                <input type="password" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" name="password" placeholder="Пароль">
+                 <div>{{error}}</div>
+               <button type="submit" class="btn btn-secondary">Войти</button>
+               <a href="/registration">
+                   <button type="button" class="btn btn-secondary">Регистрация</button>
+               </a>
+            </form>
+        </div>
+    </div>
+    </div>
+{% endblock %}
